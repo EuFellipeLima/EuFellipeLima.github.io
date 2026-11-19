@@ -55,37 +55,42 @@ body {
     flex-wrap: wrap;
 }
 
-.logo {
+.logo, .nav a {
     display: inline-block;
     padding: 0.625rem 0.75rem;
     text-decoration: none;
     color: var(--text);
-    font-weight: 700;
-    letter-spacing: 0.05em;
     border-radius: 6px;
+    transition: color 0.15s ease, background-color 0.15s ease;
 }
 
-.logo:hover {
+@media (hover: hover) {
+    .logo:hover, .nav a:hover  {
+        color: var(--accent-strong);
+    }
+}
+
+.logo:active, .nav a:active {
+    background-color: var(--border);
     color: var(--accent-strong);
 }
 
 a:focus-visible {
     outline: 2px solid var(--accent-strong);
     outline-offset: 2px;
-    border-radius: 2px;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.05em;
 }
 
 .nav a {
-    display: inline-block;
-    padding: 0.625rem 0.75rem;
-    text-decoration: none;
-    color: var(--text);
     font-weight: 500;
-    border-radius: 6px; 
 }
 
-.nav a:hover {
-    color: var(--accent-strong);
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-list {

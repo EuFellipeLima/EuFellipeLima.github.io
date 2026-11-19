@@ -29,12 +29,19 @@
 }
 
 body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
     background-color: var(--bg);
     color: var(--text);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.5;
     margin: 0;
 
+}
+
+main {
+    flex: 1;
 }
 
 .header {
@@ -91,6 +98,19 @@ a {
     margin: 0;
     padding: 0;
     gap: 0.5rem;
+}
+
+.section {
+    padding-block: clamp(2rem, 5vw, 3.5rem);
+}
+
+.section h2 {
+    margin: 0 0 0.75rem;
+}
+
+.section-intro {
+    color: var(--text-muted);
+    margin: 0 0 1.5rem;
 }
 
 .container {
@@ -158,5 +178,120 @@ a {
 }
 
 .btn:active {
+    transform: scale(0.98);
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    min-height: 44px;
+    padding: 0.875rem 1rem;
+    gap: 0.125rem;
+    text-decoration: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.contact-label {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.contact-value {
+    color: var(--text);
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    transition: color 0.15s ease;
+}
+
+@media (hover: hover) {
+    .contact-link:hover {
+        border-color: var(--accent);
+    }
+
+    .contact-link:hover .contact-value {
+        color: var(--accent-strong);
+    }
+}
+
+.contact-link:active {
+    transform: scale(0.98);
+    border-color: var(--accent);
+}
+
+@media (min-width: 32rem) {
+    .contact-link {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .contact-label {
+        font-size: 0.875rem;
+        text-transform: none;
+        letter-spacing: normal;
+    }
+}
+
+.footer {
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    padding-block: 1.5rem;
+    margin-top: 3rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.footer-top {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    width: fit-content;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.15s ease, transform 0.1s ease;
+}
+
+@media (hover: hover) {
+    .footer-top:hover {
+        color: var(--accent-strong);
+    }
+}
+
+@media (min-width: 32rem) {
+    .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.footer-top:active {
+    color: var(--accent-strong);
     transform: scale(0.98);
 }

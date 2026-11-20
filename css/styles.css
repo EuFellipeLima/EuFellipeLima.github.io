@@ -7,6 +7,10 @@
     --accent-strong: #8b0000;
     --on-accent: #fff8f0;
     --border: #cfc6b4;
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1.25rem;
+    --radius-full: 999px;
     color-scheme: light;
 }
 
@@ -68,7 +72,7 @@ main {
     transform: translateY(-200%);
     background-color: var(--accent);
     color: var(--on-accent);
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     padding: 0.5rem 1rem;
     z-index: 100;
     text-decoration: none;
@@ -103,7 +107,7 @@ main {
     padding: 0.625rem 0.75rem;
     text-decoration: none;
     color: var(--text);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     transition:
         color 0.15s ease,
         background-color 0.15s ease;
@@ -198,7 +202,7 @@ a {
     padding: 0.625rem 1rem;
     text-decoration: none;
     min-height: 44px;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     font-weight: 600;
     border: 1px solid transparent;
     transition:
@@ -245,7 +249,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     background-color: var(--surface);
     border: 1px solid var(--border);
     color: var(--text);

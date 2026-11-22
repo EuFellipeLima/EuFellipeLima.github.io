@@ -7,6 +7,7 @@
     --accent-strong: #8b0000;
     --on-accent: #fff8f0;
     --border: #cfc6b4;
+    --border-strong: #6e6657;
     --tag-bg: #bfd8d2;
     --tag-text: #0f3d36;
     --radius-sm: 0.5rem;
@@ -26,6 +27,7 @@
         --accent-strong: #ff8a8a;
         --on-accent: #1a1a1a;
         --border: #3a3633;
+        --border-strong: var(--border);
         --tag-bg: #25403a;
         --tag-text: #bfd8d2;
         color-scheme: dark;
